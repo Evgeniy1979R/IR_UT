@@ -103,21 +103,6 @@
 				</ToolTip>
 				<ExtendedTooltip name="ПодменюЭДОРасширеннаяПодсказка" id="1718"/>
 			</Popup>
-			<Popup name="ПодменюEDI" id="2359">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>EDI</v8:content>
-					</v8:item>
-				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Команды сервиса EDI</v8:content>
-					</v8:item>
-				</ToolTip>
-				<ExtendedTooltip name="ПодменюEDIРасширеннаяПодсказка" id="2364"/>
-			</Popup>
 			<Popup name="ПодменюПечать" id="1488">
 				<Title>
 					<v8:item>
@@ -244,19 +229,6 @@
 		<Event name="OnCreateAtServer" callType="After">ЕНДор_ПриСозданииНаСервереПосле</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="ГруппаПанельСостоянияEDI" id="2357">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Панель состояния EDI</v8:content>
-				</v8:item>
-			</Title>
-			<Group>AlwaysHorizontal</Group>
-			<Behavior>Usual</Behavior>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаПанельСостоянияEDIРасширеннаяПодсказка" id="2360"/>
-		</UsualGroup>
 		<UsualGroup name="ГруппаОсновныеДанные" id="2358">
 			<Title>
 				<v8:item>
@@ -283,6 +255,41 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаДанныеДокументаРасширеннаяПодсказка" id="2365"/>
 					<ChildItems>
+						<UsualGroup name="ГруппаКомментарийИспользованиеУстаревшейКомиссии" id="2461">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа комментарий использование устаревшей комиссии</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа комментарий использование устаревшей комиссии</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомментарийИспользованиеУстаревшейКомиссииРасширеннаяПодсказка" id="2462"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияКомментарийКомиссии" id="2463">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация комментарий комиссии</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияКомментарийКомиссииКонтекстноеМеню" id="2464"/>
+									<ExtendedTooltip name="ДекорацияКомментарийКомиссииРасширеннаяПодсказка" id="2465"/>
+								</PictureDecoration>
+								<LabelDecoration name="КомментарийИспользованиеУстаревшейКомиссии" id="2466">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>web:FireBrick</TextColor>
+									<ContextMenu name="КомментарийИспользованиеУстаревшейКомиссииКонтекстноеМеню" id="2467"/>
+									<ExtendedTooltip name="КомментарийИспользованиеУстаревшейКомиссииРасширеннаяПодсказка" id="2468"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
 						<UsualGroup name="ГруппаСтатусПриоритет" id="610">
 							<Title>
 								<v8:item>
@@ -560,6 +567,31 @@
 															<ContextMenu name="СоглашениеКонтекстноеМеню" id="332"/>
 															<ExtendedTooltip name="СоглашениеExtendedTooltip" id="1120"/>
 														</InputField>
+														<UsualGroup name="ГруппаУправлениеДоставкой" id="2473">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа управление доставкой</v8:content>
+																</v8:item>
+															</Title>
+															<Group>AlwaysHorizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаУправлениеДоставкойРасширеннаяПодсказка" id="2469"/>
+															<ChildItems>
+																<CheckBoxField name="ТребуетсяДоставка" id="2475">
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Switcher</CheckBoxType>
+																	<ContextMenu name="ТребуетсяДоставкаКонтекстноеМеню" id="2476"/>
+																	<ExtendedTooltip name="ТребуетсяДоставкаРасширеннаяПодсказка" id="2477"/>
+																</CheckBoxField>
+																<Button name="РедактироватьПараметрыДоставкиШапка" id="2471">
+																	<Type>Hyperlink</Type>
+																	<CommandName>0</CommandName>
+																	<ExtendedTooltip name="РедактироватьПараметрыДоставкиШапкаРасширеннаяПодсказка" id="2472"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
 												<UsualGroup name="ГруппаШапкаПраво" id="564">
@@ -588,116 +620,26 @@
 															<ContextMenu name="ХозяйственнаяОперацияКонтекстноеМеню" id="795"/>
 															<ExtendedTooltip name="ХозяйственнаяОперацияExtendedTooltip" id="1271"/>
 														</InputField>
-														<UsualGroup name="ГруппаНадписьОрганизация" id="1540">
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Надпись организация</v8:content>
-																</v8:item>
-															</Title>
-															<Group>Horizontal</Group>
-															<Behavior>Usual</Behavior>
-															<Representation>None</Representation>
-															<United>false</United>
-															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="ГруппаНадписьОрганизацияРасширеннаяПодсказка" id="1541"/>
-															<ChildItems>
-																<InputField name="Организация" id="11">
-																	<TitleLocation>Left</TitleLocation>
-																	<AutoMaxWidth>false</AutoMaxWidth>
-																	<MaxWidth>28</MaxWidth>
-																	<Wrap>false</Wrap>
-																	<DropListButton>true</DropListButton>
-																	<ChoiceButton>false</ChoiceButton>
-																	<DropListWidth>33</DropListWidth>
-																	<ContextMenu name="ОрганизацияКонтекстноеМеню" id="12"/>
-																	<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="1132"/>
-																</InputField>
-																<PictureDecoration name="КартинкаОтгрузкаПартнеруЗапрещена" id="1100">
-																	<Width>2</Width>
-																	<AutoMaxWidth>false</AutoMaxWidth>
-																	<Height>1</Height>
-																	<AutoMaxHeight>false</AutoMaxHeight>
-																	<Title formatted="false">
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Картинка отгрузка запрещена</v8:content>
-																		</v8:item>
-																	</Title>
-																	<GroupVerticalAlign>Center</GroupVerticalAlign>
-																	<FileDragMode>AsFile</FileDragMode>
-																	<ContextMenu name="КартинкаОтгрузкаПартнеруЗапрещенаКонтекстноеМеню" id="1101"/>
-																	<ExtendedTooltip name="КартинкаОтгрузкаПартнеруЗапрещенаExtendedTooltip" id="1133"/>
-																</PictureDecoration>
-																<LabelDecoration name="ТекстОтгрузкаПартнеруЗапрещена" id="1102">
-																	<AutoMaxWidth>false</AutoMaxWidth>
-																	<TextColor>web:FireBrick</TextColor>
-																	<Title formatted="false">
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Отгрузка клиенту запрещена</v8:content>
-																		</v8:item>
-																	</Title>
-																	<GroupVerticalAlign>Top</GroupVerticalAlign>
-																	<Hyperlink>true</Hyperlink>
-																	<ContextMenu name="ТекстОтгрузкаПартнеруЗапрещенаКонтекстноеМеню" id="1103"/>
-																	<ExtendedTooltip name="ТекстОтгрузкаПартнеруЗапрещенаExtendedTooltip" id="1134"/>
-																</LabelDecoration>
-															</ChildItems>
-														</UsualGroup>
-														<UsualGroup name="ГруппаНадписьДоговор" id="1545">
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Надпись договор</v8:content>
-																</v8:item>
-															</Title>
-															<Group>Horizontal</Group>
-															<Behavior>Usual</Behavior>
-															<Representation>None</Representation>
-															<United>false</United>
-															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="ГруппаНадписьДоговорРасширеннаяПодсказка" id="1546"/>
-															<ChildItems>
-																<InputField name="Договор" id="972">
-																	<TitleLocation>Left</TitleLocation>
-																	<AutoMaxWidth>false</AutoMaxWidth>
-																	<MaxWidth>28</MaxWidth>
-																	<AutoMarkIncomplete>false</AutoMarkIncomplete>
-																	<DropListWidth>33</DropListWidth>
-																	<ContextMenu name="ДоговорКонтекстноеМеню" id="973"/>
-																	<ExtendedTooltip name="ДоговорExtendedTooltip" id="1137"/>
-																</InputField>
-																<PictureDecoration name="КартинкаОтгрузкаЗапрещена" id="1079">
-																	<Width>2</Width>
-																	<AutoMaxWidth>false</AutoMaxWidth>
-																	<Height>1</Height>
-																	<AutoMaxHeight>false</AutoMaxHeight>
-																	<Title formatted="false">
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Картинка отгрузка запрещена</v8:content>
-																		</v8:item>
-																	</Title>
-																	<GroupVerticalAlign>Center</GroupVerticalAlign>
-																	<FileDragMode>AsFile</FileDragMode>
-																	<ContextMenu name="КартинкаОтгрузкаЗапрещенаКонтекстноеМеню" id="1080"/>
-																	<ExtendedTooltip name="КартинкаОтгрузкаЗапрещенаExtendedTooltip" id="1138"/>
-																</PictureDecoration>
-																<LabelDecoration name="ДекорацияОграничениеЗадолженности" id="1754">
-																	<TextColor>web:FireBrick</TextColor>
-																	<Title formatted="false">
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Декорация ограничение задолженности</v8:content>
-																		</v8:item>
-																	</Title>
-																	<Hyperlink>true</Hyperlink>
-																	<ContextMenu name="ДекорацияОграничениеЗадолженностиКонтекстноеМеню" id="1755"/>
-																	<ExtendedTooltip name="ДекорацияОграничениеЗадолженностиРасширеннаяПодсказка" id="1756"/>
-																</LabelDecoration>
-															</ChildItems>
-														</UsualGroup>
+														<InputField name="Организация" id="11">
+															<TitleLocation>Left</TitleLocation>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<MaxWidth>28</MaxWidth>
+															<Wrap>false</Wrap>
+															<DropListButton>true</DropListButton>
+															<ChoiceButton>false</ChoiceButton>
+															<DropListWidth>33</DropListWidth>
+															<ContextMenu name="ОрганизацияКонтекстноеМеню" id="12"/>
+															<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="1132"/>
+														</InputField>
+														<InputField name="Договор" id="972">
+															<TitleLocation>Left</TitleLocation>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<MaxWidth>28</MaxWidth>
+															<AutoMarkIncomplete>false</AutoMarkIncomplete>
+															<DropListWidth>33</DropListWidth>
+															<ContextMenu name="ДоговорКонтекстноеМеню" id="973"/>
+															<ExtendedTooltip name="ДоговорExtendedTooltip" id="1137"/>
+														</InputField>
 														<InputField name="Склад" id="15">
 															<Title>
 																<v8:item>
@@ -716,6 +658,120 @@
 															<ContextMenu name="СкладКонтекстноеМеню" id="16"/>
 															<ExtendedTooltip name="СкладExtendedTooltip" id="1142"/>
 														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаНадписи" id="2478">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа надписи</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<United>false</United>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаНадписиРасширеннаяПодсказка" id="2480"/>
+													<ChildItems>
+														<PictureDecoration name="ОтступОперация" id="2429">
+															<Width>1</Width>
+															<Height>1</Height>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Отступ операция</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ОтступОперацияКонтекстноеМеню" id="2430"/>
+															<ExtendedTooltip name="ОтступОперацияРасширеннаяПодсказка" id="2431"/>
+														</PictureDecoration>
+														<UsualGroup name="ГруппаОтгрузкаЗапрещена" id="2432">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа отгрузка запрещена</v8:content>
+																</v8:item>
+															</Title>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОтгрузкаЗапрещенаРасширеннаяПодсказка" id="2433"/>
+															<ChildItems>
+																<PictureDecoration name="КартинкаОтгрузкаПартнеруЗапрещена" id="1100">
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<AutoMaxHeight>false</AutoMaxHeight>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Картинка отгрузка запрещена</v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupVerticalAlign>Center</GroupVerticalAlign>
+																	<FileDragMode>AsFile</FileDragMode>
+																	<ContextMenu name="КартинкаОтгрузкаПартнеруЗапрещенаКонтекстноеМеню" id="1101"/>
+																	<ExtendedTooltip name="КартинкаОтгрузкаПартнеруЗапрещенаExtendedTooltip" id="1133"/>
+																</PictureDecoration>
+																<LabelDecoration name="ТекстОтгрузкаПартнеруЗапрещена" id="1102">
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<Height>1</Height>
+																	<TextColor>web:FireBrick</TextColor>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Отгрузка клиенту запрещена</v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupVerticalAlign>Top</GroupVerticalAlign>
+																	<Hyperlink>true</Hyperlink>
+																	<VerticalAlign>Center</VerticalAlign>
+																	<ContextMenu name="ТекстОтгрузкаПартнеруЗапрещенаКонтекстноеМеню" id="1103"/>
+																	<ExtendedTooltip name="ТекстОтгрузкаПартнеруЗапрещенаExtendedTooltip" id="1134"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаНадписьДоговор" id="1545">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Надпись договор</v8:content>
+																</v8:item>
+															</Title>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаНадписьДоговорРасширеннаяПодсказка" id="1546"/>
+															<ChildItems>
+																<PictureDecoration name="КартинкаОтгрузкаЗапрещена" id="1079">
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<AutoMaxHeight>false</AutoMaxHeight>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Картинка отгрузка запрещена</v8:content>
+																		</v8:item>
+																	</Title>
+																	<GroupVerticalAlign>Center</GroupVerticalAlign>
+																	<FileDragMode>AsFile</FileDragMode>
+																	<ContextMenu name="КартинкаОтгрузкаЗапрещенаКонтекстноеМеню" id="1080"/>
+																	<ExtendedTooltip name="КартинкаОтгрузкаЗапрещенаExtendedTooltip" id="1138"/>
+																</PictureDecoration>
+																<LabelDecoration name="ДекорацияОграничениеЗадолженности" id="1754">
+																	<Height>1</Height>
+																	<TextColor>web:FireBrick</TextColor>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Декорация ограничение задолженности</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Hyperlink>true</Hyperlink>
+																	<VerticalAlign>Center</VerticalAlign>
+																	<ContextMenu name="ДекорацияОграничениеЗадолженностиКонтекстноеМеню" id="1755"/>
+																	<ExtendedTooltip name="ДекорацияОграничениеЗадолженностиРасширеннаяПодсказка" id="1756"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
 											</ChildItems>
@@ -777,7 +833,6 @@
 												</v8:item>
 											</Title>
 											<Width>76</Width>
-											<HorizontalStretch>false</HorizontalStretch>
 											<Group>Horizontal</Group>
 											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
@@ -1389,6 +1444,11 @@
 															</ButtonGroup>
 														</ChildItems>
 													</Popup>
+													<Button name="РедактироватьПараметрыДоставкиТовары" id="2474">
+														<Type>CommandBarButton</Type>
+														<CommandName>0</CommandName>
+														<ExtendedTooltip name="РедактироватьПараметрыДоставкиТоварыРасширеннаяПодсказка" id="2470"/>
+													</Button>
 													<Button name="ТоварыВыделитьВсе" id="1362">
 														<Type>CommandBarButton</Type>
 														<CommandName>0</CommandName>
@@ -3978,21 +4038,6 @@
 					</ToolTip>
 					<ExtendedTooltip name="ПодменюЭДОРасширеннаяПодсказка" id="1718"/>
 				</Popup>
-				<Popup name="ПодменюEDI" id="2359">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>EDI</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Команды сервиса EDI</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="ПодменюEDIРасширеннаяПодсказка" id="2364"/>
-				</Popup>
 				<Popup name="ПодменюПечать" id="1488">
 					<Title>
 						<v8:item>
@@ -4116,19 +4161,6 @@
 			</ChildItems>
 		</AutoCommandBar>
 		<ChildItems>
-			<UsualGroup name="ГруппаПанельСостоянияEDI" id="2357">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Панель состояния EDI</v8:content>
-					</v8:item>
-				</Title>
-				<Group>AlwaysHorizontal</Group>
-				<Behavior>Usual</Behavior>
-				<Representation>None</Representation>
-				<ShowTitle>false</ShowTitle>
-				<ExtendedTooltip name="ГруппаПанельСостоянияEDIРасширеннаяПодсказка" id="2360"/>
-			</UsualGroup>
 			<UsualGroup name="ГруппаОсновныеДанные" id="2358">
 				<Title>
 					<v8:item>
@@ -4155,6 +4187,41 @@
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ГруппаДанныеДокументаРасширеннаяПодсказка" id="2365"/>
 						<ChildItems>
+							<UsualGroup name="ГруппаКомментарийИспользованиеУстаревшейКомиссии" id="2461">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа комментарий использование устаревшей комиссии</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа комментарий использование устаревшей комиссии</v8:content>
+									</v8:item>
+								</ToolTip>
+								<Behavior>Usual</Behavior>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаКомментарийИспользованиеУстаревшейКомиссииРасширеннаяПодсказка" id="2462"/>
+								<ChildItems>
+									<PictureDecoration name="ДекорацияКомментарийКомиссии" id="2463">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Декорация комментарий комиссии</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="ДекорацияКомментарийКомиссииКонтекстноеМеню" id="2464"/>
+										<ExtendedTooltip name="ДекорацияКомментарийКомиссииРасширеннаяПодсказка" id="2465"/>
+									</PictureDecoration>
+									<LabelDecoration name="КомментарийИспользованиеУстаревшейКомиссии" id="2466">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<TextColor>web:FireBrick</TextColor>
+										<ContextMenu name="КомментарийИспользованиеУстаревшейКомиссииКонтекстноеМеню" id="2467"/>
+										<ExtendedTooltip name="КомментарийИспользованиеУстаревшейКомиссииРасширеннаяПодсказка" id="2468"/>
+									</LabelDecoration>
+								</ChildItems>
+							</UsualGroup>
 							<UsualGroup name="ГруппаСтатусПриоритет" id="610">
 								<Title>
 									<v8:item>
@@ -4176,6 +4243,7 @@
 										<ChoiceButton>false</ChoiceButton>
 										<ListChoiceMode>true</ListChoiceMode>
 										<ChooseType>false</ChooseType>
+										<EditTextUpdate>OnValueChange</EditTextUpdate>
 										<ContextMenu name="СтатусКонтекстноеМеню" id="621"/>
 										<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="1127"/>
 									</InputField>
@@ -4367,6 +4435,7 @@
 																		<Width>14</Width>
 																		<HorizontalStretch>false</HorizontalStretch>
 																		<Wrap>false</Wrap>
+																		<EditTextUpdate>OnValueChange</EditTextUpdate>
 																		<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
 																		<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="1117"/>
 																	</InputField>
@@ -4432,6 +4501,31 @@
 																<ContextMenu name="СоглашениеКонтекстноеМеню" id="332"/>
 																<ExtendedTooltip name="СоглашениеРасширеннаяПодсказка" id="1120"/>
 															</InputField>
+															<UsualGroup name="ГруппаУправлениеДоставкой" id="2473">
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Группа управление доставкой</v8:content>
+																	</v8:item>
+																</Title>
+																<Group>AlwaysHorizontal</Group>
+																<Representation>None</Representation>
+																<ShowTitle>false</ShowTitle>
+																<ExtendedTooltip name="ГруппаУправлениеДоставкойРасширеннаяПодсказка" id="2469"/>
+																<ChildItems>
+																	<CheckBoxField name="ТребуетсяДоставка" id="2475">
+																		<TitleLocation>Right</TitleLocation>
+																		<CheckBoxType>Switcher</CheckBoxType>
+																		<ContextMenu name="ТребуетсяДоставкаКонтекстноеМеню" id="2476"/>
+																		<ExtendedTooltip name="ТребуетсяДоставкаРасширеннаяПодсказка" id="2477"/>
+																	</CheckBoxField>
+																	<Button name="РедактироватьПараметрыДоставкиШапка" id="2471">
+																		<Type>Hyperlink</Type>
+																		<CommandName>0</CommandName>
+																		<ExtendedTooltip name="РедактироватьПараметрыДоставкиШапкаРасширеннаяПодсказка" id="2472"/>
+																	</Button>
+																</ChildItems>
+															</UsualGroup>
 														</ChildItems>
 													</UsualGroup>
 													<UsualGroup name="ГруппаШапкаПраво" id="564">
@@ -4460,116 +4554,26 @@
 																<ContextMenu name="ХозяйственнаяОперацияКонтекстноеМеню" id="795"/>
 																<ExtendedTooltip name="ХозяйственнаяОперацияРасширеннаяПодсказка" id="1271"/>
 															</InputField>
-															<UsualGroup name="ГруппаНадписьОрганизация" id="1540">
-																<Title>
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Надпись организация</v8:content>
-																	</v8:item>
-																</Title>
-																<Group>Horizontal</Group>
-																<Behavior>Usual</Behavior>
-																<Representation>None</Representation>
-																<United>false</United>
-																<ShowTitle>false</ShowTitle>
-																<ExtendedTooltip name="ГруппаНадписьОрганизацияРасширеннаяПодсказка" id="1541"/>
-																<ChildItems>
-																	<InputField name="Организация" id="11">
-																		<TitleLocation>Left</TitleLocation>
-																		<AutoMaxWidth>false</AutoMaxWidth>
-																		<MaxWidth>28</MaxWidth>
-																		<Wrap>false</Wrap>
-																		<DropListButton>true</DropListButton>
-																		<ChoiceButton>false</ChoiceButton>
-																		<DropListWidth>33</DropListWidth>
-																		<ContextMenu name="ОрганизацияКонтекстноеМеню" id="12"/>
-																		<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="1132"/>
-																	</InputField>
-																	<PictureDecoration name="КартинкаОтгрузкаПартнеруЗапрещена" id="1100">
-																		<Width>2</Width>
-																		<AutoMaxWidth>false</AutoMaxWidth>
-																		<Height>1</Height>
-																		<AutoMaxHeight>false</AutoMaxHeight>
-																		<Title formatted="false">
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Картинка отгрузка запрещена</v8:content>
-																			</v8:item>
-																		</Title>
-																		<GroupVerticalAlign>Center</GroupVerticalAlign>
-																		<FileDragMode>AsFile</FileDragMode>
-																		<ContextMenu name="КартинкаОтгрузкаПартнеруЗапрещенаКонтекстноеМеню" id="1101"/>
-																		<ExtendedTooltip name="КартинкаОтгрузкаПартнеруЗапрещенаРасширеннаяПодсказка" id="1133"/>
-																	</PictureDecoration>
-																	<LabelDecoration name="ТекстОтгрузкаПартнеруЗапрещена" id="1102">
-																		<AutoMaxWidth>false</AutoMaxWidth>
-																		<TextColor>web:FireBrick</TextColor>
-																		<Title formatted="false">
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Отгрузка клиенту запрещена</v8:content>
-																			</v8:item>
-																		</Title>
-																		<GroupVerticalAlign>Top</GroupVerticalAlign>
-																		<Hyperlink>true</Hyperlink>
-																		<ContextMenu name="ТекстОтгрузкаПартнеруЗапрещенаКонтекстноеМеню" id="1103"/>
-																		<ExtendedTooltip name="ТекстОтгрузкаПартнеруЗапрещенаРасширеннаяПодсказка" id="1134"/>
-																	</LabelDecoration>
-																</ChildItems>
-															</UsualGroup>
-															<UsualGroup name="ГруппаНадписьДоговор" id="1545">
-																<Title>
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Надпись договор</v8:content>
-																	</v8:item>
-																</Title>
-																<Group>Horizontal</Group>
-																<Behavior>Usual</Behavior>
-																<Representation>None</Representation>
-																<United>false</United>
-																<ShowTitle>false</ShowTitle>
-																<ExtendedTooltip name="ГруппаНадписьДоговорРасширеннаяПодсказка" id="1546"/>
-																<ChildItems>
-																	<InputField name="Договор" id="972">
-																		<TitleLocation>Left</TitleLocation>
-																		<AutoMaxWidth>false</AutoMaxWidth>
-																		<MaxWidth>28</MaxWidth>
-																		<AutoMarkIncomplete>false</AutoMarkIncomplete>
-																		<DropListWidth>33</DropListWidth>
-																		<ContextMenu name="ДоговорКонтекстноеМеню" id="973"/>
-																		<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="1137"/>
-																	</InputField>
-																	<PictureDecoration name="КартинкаОтгрузкаЗапрещена" id="1079">
-																		<Width>2</Width>
-																		<AutoMaxWidth>false</AutoMaxWidth>
-																		<Height>1</Height>
-																		<AutoMaxHeight>false</AutoMaxHeight>
-																		<Title formatted="false">
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Картинка отгрузка запрещена</v8:content>
-																			</v8:item>
-																		</Title>
-																		<GroupVerticalAlign>Center</GroupVerticalAlign>
-																		<FileDragMode>AsFile</FileDragMode>
-																		<ContextMenu name="КартинкаОтгрузкаЗапрещенаКонтекстноеМеню" id="1080"/>
-																		<ExtendedTooltip name="КартинкаОтгрузкаЗапрещенаРасширеннаяПодсказка" id="1138"/>
-																	</PictureDecoration>
-																	<LabelDecoration name="ДекорацияОграничениеЗадолженности" id="1754">
-																		<TextColor>web:FireBrick</TextColor>
-																		<Title formatted="false">
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Декорация ограничение задолженности</v8:content>
-																			</v8:item>
-																		</Title>
-																		<Hyperlink>true</Hyperlink>
-																		<ContextMenu name="ДекорацияОграничениеЗадолженностиКонтекстноеМеню" id="1755"/>
-																		<ExtendedTooltip name="ДекорацияОграничениеЗадолженностиРасширеннаяПодсказка" id="1756"/>
-																	</LabelDecoration>
-																</ChildItems>
-															</UsualGroup>
+															<InputField name="Организация" id="11">
+																<TitleLocation>Left</TitleLocation>
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<MaxWidth>28</MaxWidth>
+																<Wrap>false</Wrap>
+																<DropListButton>true</DropListButton>
+																<ChoiceButton>false</ChoiceButton>
+																<DropListWidth>33</DropListWidth>
+																<ContextMenu name="ОрганизацияКонтекстноеМеню" id="12"/>
+																<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="1132"/>
+															</InputField>
+															<InputField name="Договор" id="972">
+																<TitleLocation>Left</TitleLocation>
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<MaxWidth>28</MaxWidth>
+																<AutoMarkIncomplete>false</AutoMarkIncomplete>
+																<DropListWidth>33</DropListWidth>
+																<ContextMenu name="ДоговорКонтекстноеМеню" id="973"/>
+																<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="1137"/>
+															</InputField>
 															<InputField name="Склад" id="15">
 																<Title>
 																	<v8:item>
@@ -4588,6 +4592,114 @@
 																<ContextMenu name="СкладКонтекстноеМеню" id="16"/>
 																<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="1142"/>
 															</InputField>
+														</ChildItems>
+													</UsualGroup>
+													<UsualGroup name="ГруппаНадписи" id="2427">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Группа надписи</v8:content>
+															</v8:item>
+														</Title>
+														<Group>Vertical</Group>
+														<Behavior>Usual</Behavior>
+														<Representation>None</Representation>
+														<United>false</United>
+														<ShowTitle>false</ShowTitle>
+														<ExtendedTooltip name="ГруппаНадписиРасширеннаяПодсказка" id="2428"/>
+														<ChildItems>
+															<PictureDecoration name="ОтступОперация" id="2429">
+																<Width>1</Width>
+																<Height>1</Height>
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Отступ операция</v8:content>
+																	</v8:item>
+																</Title>
+																<ContextMenu name="ОтступОперацияКонтекстноеМеню" id="2430"/>
+																<ExtendedTooltip name="ОтступОперацияРасширеннаяПодсказка" id="2431"/>
+															</PictureDecoration>
+															<UsualGroup name="ГруппаОтгрузкаЗапрещена" id="2432">
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Группа отгрузка запрещена</v8:content>
+																	</v8:item>
+																</Title>
+																<Behavior>Usual</Behavior>
+																<Representation>None</Representation>
+																<ShowTitle>false</ShowTitle>
+																<ExtendedTooltip name="ГруппаОтгрузкаЗапрещенаРасширеннаяПодсказка" id="2433"/>
+																<ChildItems>
+																	<PictureDecoration name="КартинкаОтгрузкаПартнеруЗапрещена" id="2434">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Картинка отгрузка запрещена</v8:content>
+																			</v8:item>
+																		</Title>
+																		<GroupVerticalAlign>Center</GroupVerticalAlign>
+																		<FileDragMode>AsFile</FileDragMode>
+																		<ContextMenu name="КартинкаОтгрузкаПартнеруЗапрещенаКонтекстноеМеню" id="2435"/>
+																		<ExtendedTooltip name="КартинкаОтгрузкаПартнеруЗапрещенаРасширеннаяПодсказка" id="2436"/>
+																	</PictureDecoration>
+																	<LabelDecoration name="ТекстОтгрузкаПартнеруЗапрещена" id="2437">
+																		<Height>1</Height>
+																		<TextColor>web:FireBrick</TextColor>
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Отгрузка клиенту запрещена</v8:content>
+																			</v8:item>
+																		</Title>
+																		<Hyperlink>true</Hyperlink>
+																		<VerticalAlign>Center</VerticalAlign>
+																		<ContextMenu name="ТекстОтгрузкаПартнеруЗапрещенаКонтекстноеМеню" id="2438"/>
+																		<ExtendedTooltip name="ТекстОтгрузкаПартнеруЗапрещенаРасширеннаяПодсказка" id="2439"/>
+																	</LabelDecoration>
+																</ChildItems>
+															</UsualGroup>
+															<UsualGroup name="ГруппаНадписьДоговор" id="2440">
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Надпись договор</v8:content>
+																	</v8:item>
+																</Title>
+																<Behavior>Usual</Behavior>
+																<Representation>None</Representation>
+																<ShowTitle>false</ShowTitle>
+																<ExtendedTooltip name="ГруппаНадписьДоговорРасширеннаяПодсказка" id="2441"/>
+																<ChildItems>
+																	<PictureDecoration name="КартинкаОтгрузкаЗапрещена" id="2455">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Картинка отгрузка запрещена</v8:content>
+																			</v8:item>
+																		</Title>
+																		<GroupVerticalAlign>Center</GroupVerticalAlign>
+																		<FileDragMode>AsFile</FileDragMode>
+																		<ContextMenu name="КартинкаОтгрузкаЗапрещенаКонтекстноеМеню" id="2456"/>
+																		<ExtendedTooltip name="КартинкаОтгрузкаЗапрещенаРасширеннаяПодсказка" id="2457"/>
+																	</PictureDecoration>
+																	<LabelDecoration name="ДекорацияОграничениеЗадолженности" id="2458">
+																		<Height>1</Height>
+																		<TextColor>web:FireBrick</TextColor>
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Декорация ограничение задолженности</v8:content>
+																			</v8:item>
+																		</Title>
+																		<Hyperlink>true</Hyperlink>
+																		<VerticalAlign>Center</VerticalAlign>
+																		<ContextMenu name="ДекорацияОграничениеЗадолженностиКонтекстноеМеню" id="2459"/>
+																		<ExtendedTooltip name="ДекорацияОграничениеЗадолженностиРасширеннаяПодсказка" id="2460"/>
+																	</LabelDecoration>
+																</ChildItems>
+															</UsualGroup>
 														</ChildItems>
 													</UsualGroup>
 												</ChildItems>
@@ -4649,7 +4761,6 @@
 													</v8:item>
 												</Title>
 												<Width>76</Width>
-												<HorizontalStretch>false</HorizontalStretch>
 												<Group>Horizontal</Group>
 												<Behavior>Usual</Behavior>
 												<Representation>None</Representation>
@@ -5256,6 +5367,11 @@
 																</ButtonGroup>
 															</ChildItems>
 														</Popup>
+														<Button name="РедактироватьПараметрыДоставкиТовары" id="2474">
+															<Type>CommandBarButton</Type>
+															<CommandName>0</CommandName>
+															<ExtendedTooltip name="РедактироватьПараметрыДоставкиТоварыРасширеннаяПодсказка" id="2470"/>
+														</Button>
 														<Button name="ТоварыВыделитьВсе" id="1362">
 															<Type>CommandBarButton</Type>
 															<CommandName>0</CommandName>

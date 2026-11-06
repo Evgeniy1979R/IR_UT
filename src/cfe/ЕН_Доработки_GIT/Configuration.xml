@@ -91,6 +91,7 @@
 			<Role>ПолныеПрава</Role>
 			<CommonTemplate>ОформлениеОтчетовБежевый</CommonTemplate>
 			<CommonModule>МенеджерРегистрации</CommonModule>
+			<CommonModule>ЕНДор_ДФИ</CommonModule>
 			<Catalog>ДоговорыКонтрагентов</Catalog>
 			<Document>РеализацияТоваровУслуг</Document>
 			<Document>РасходныйОрдерНаТовары</Document>
